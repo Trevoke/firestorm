@@ -19,7 +19,6 @@ defmodule FirestormNotifier.NotificationConsumer do
   end
 
   def handle_event({:new_post, post}) do
-    IO.puts "there was a new post! #{inspect post}"
     notify_thread_followers(post)
   end
   # If we don't care about the event, do nothing
